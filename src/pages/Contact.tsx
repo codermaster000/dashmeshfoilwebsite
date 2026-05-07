@@ -33,7 +33,7 @@ const Contact = () => {
       };
 
       // POST to your backend
-      const res = await fetch("http://localhost:4000/api/contact", {
+      const res = await fetch("http://187.127.158.84:4000/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
