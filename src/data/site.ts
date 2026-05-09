@@ -139,6 +139,7 @@ export const mainNav = [
     to: "/markets",
     children: markets.map((m) => ({ label: m.title, to: `/markets/${m.slug}` })),
   },
+  { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
 ];
 

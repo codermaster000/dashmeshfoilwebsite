@@ -11,7 +11,7 @@ import ProductDetail from "./pages/ProductDetail.tsx";
 import Markets from "./pages/Markets.tsx";
 import MarketDetail from "./pages/MarketDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
-
+import Projects from "./pages/Projects.tsx";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/markets" element={<Markets />} />
           <Route path="/markets/:slug" element={<MarketDetail />} />
+           <Route path="/projects" element={<Projects />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
