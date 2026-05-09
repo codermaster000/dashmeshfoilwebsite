@@ -111,21 +111,28 @@ const Contact = () => {
                               {/* Quick contact cards */}
                               <section className="py-16 bg-background">
                                 <div className="container mx-auto px-4 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                  {cards.map((c) => (
-                                    <a
-                                      key={c.label}
-                                      href={c.href}
-                                      className="group bg-card rounded-2xl p-7 shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2 block"
-                                    >
-                                      <div className="w-14 h-14 rounded-xl gradient-primary grid place-items-center mb-5 shadow-elegant group-hover:scale-110 transition-smooth">
-                                        <c.icon className="w-7 h-7 text-primary-foreground" />
-                                      </div>
-                                      <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">{c.label}</div>
-                                      {c.lines.map((l) => (
-                                        <div key={l} className="font-semibold text-foreground">{l}</div>
-                                      ))}
-                                    </a>
-                                  ))}
+                                 {cards.map((c) => (
+  <a
+    key={c.label}
+    href={c.href}
+    className="group bg-card rounded-2xl p-7 shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2 block"
+  >
+    <div className="w-14 h-14 rounded-xl gradient-primary grid place-items-center mb-5 shadow-elegant group-hover:scale-110 transition-smooth">
+      <c.icon className="w-7 h-7 text-primary-foreground" />
+    </div>
+
+    <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+      {c.label}
+    </div>
+
+    {c.lines.map((l) => (
+      <div key={l} className="font-semibold text-foreground">
+        {l}
+      </div>
+    ))}
+  </a>
+))}
+                          
                                 </div>
                               </section>
 
