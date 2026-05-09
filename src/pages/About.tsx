@@ -4,6 +4,7 @@ import Layout from "@/components/site/Layout";
 import PageHero from "@/components/site/PageHero";
 import { Button } from "@/components/ui/button";
 import factoryImg from "@/assets/about-factory.jpg";
+import { Helmet } from "react-helmet-async";
 
 const stats = [
   { n: "15+", l: "Years of Expertise" },
@@ -20,14 +21,36 @@ const values = [
 ];
 
 const About = () => (
-  <Layout>
+  <>
+<Layout>
+  <Helmet>
+  <title>Dashmesh Foil – One-Stop Packaging Solutions</title>
+	<meta name="description"
+		content="Dashmesh Foil offers premium heat-shrink labels, laminated pouches, aluminium foil lids & more for dairy, food, pharma & beverages. Contact us Today."/>
+  <meta name="robots" content="index, follow" />
+  <meta property="og:url" content="https://www.dashmeshfoil.com/aboutus/"/>
+	 <meta property="og:type" content="website"/>
+	 <meta property="og:title" content="Dashmesh Foil"/>
+	 <meta property="og:description"
+		content="Dashmesh Foil offers premium heat-shrink labels, laminated pouches, aluminium foil lids & more for dairy, food, pharma &   beverages. Contact us Today"/>
+	<meta property="og:image" content=""/>
+
+	 {/* <!-- Twitter Meta Tags --> */}
+	 <meta name="twitter:card" content="summary_large_image"/>
+	 <meta property="twitter:domain" content="dashmeshfoil.com"/>
+	 <meta property="twitter:url" content="https://www.dashmeshfoil.com/aboutus"/>
+	 <meta name="twitter:title" content="Dashmesh Foil – One-Stop Packaging Solutions"/>
+  	<meta name="twitter:description"
+		content="Dashmesh Foil offers premium heat-shrink labels, laminated pouches, aluminium foil lids & more for dairy, food, pharma & beverages. Contact us Today"/>
+	 <meta name="twitter:image" content=""/>
+    </Helmet>
     <PageHero
       eyebrow="About Us"
       title="Crafting premium labels"
       highlight="for premium brands"
       description="Dashmesh Foil is a trusted manufacturer and supplier of packaging material and labels — engineered for performance and designed for the shelf."
       crumbs={[{ label: "Home", to: "/" }, { label: "About" }]}
-    />
+/>
 
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
@@ -38,7 +61,7 @@ const About = () => (
             alt="Dashmesh Foil printing facility"
             loading="lazy"
             className="relative rounded-3xl shadow-elegant w-full h-[500px] object-cover"
-          />
+            />
           <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 shadow-elegant hidden md:flex items-center gap-4">
             <div className="w-12 h-12 rounded-full gradient-primary grid place-items-center">
               <Trophy className="w-6 h-6 text-primary-foreground" />
@@ -121,6 +144,7 @@ const About = () => (
       </div>
     </section>
   </Layout>
+          </>
 );
 
 export default About;

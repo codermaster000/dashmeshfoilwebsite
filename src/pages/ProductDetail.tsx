@@ -4,6 +4,7 @@ import Layout from "@/components/site/Layout";
 import PageHero from "@/components/site/PageHero";
 import { Button } from "@/components/ui/button";
 import { productCategories } from "@/data/site";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -14,6 +15,37 @@ const ProductDetail = () => {
   const others = productCategories.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
+
+    <>
+    <Helmet>
+      <title>IML Labels </title>
+	<meta name="description"content="Dashmesh Foil offers premium quality IML Labels for packaging. IML is a sustainable and fully recyclable packaging solution."/>
+	{/* <!-- Stylesheets --> */}
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+	<link href="css/responsive.css" rel="stylesheet"/>
+	<link rel="canonical" href="https://www.dashmeshfoil.com/products/iml-labels"/>
+    <meta name="robots" content="index, follow" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&amp;display=swap"
+		rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"
+		rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montaga&amp;display=swap" rel="stylesheet"/>
+
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
+	<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+
+	{/* <!-- Responsive --> */}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
+    </Helmet>
+
+
     <Layout>
       <PageHero
         eyebrow="Product"
@@ -24,7 +56,7 @@ const ProductDetail = () => {
           { label: "Products", to: "/products" },
           { label: product.title },
         ]}
-      />
+        />
 
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
@@ -34,7 +66,7 @@ const ProductDetail = () => {
               src={product.image}
               alt={product.title}
               className="relative rounded-3xl shadow-elegant w-full h-[500px] object-cover"
-            />
+              />
             <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 shadow-elegant hidden md:flex items-center gap-4">
               <div className="w-12 h-12 rounded-full gradient-primary grid place-items-center">
                 <Layers className="w-6 h-6 text-primary-foreground" />
@@ -80,9 +112,9 @@ const ProductDetail = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {others.map((p) => (
               <Link
-                key={p.slug}
-                to={`/products/${p.slug}`}
-                className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2"
+              key={p.slug}
+              to={`/products/${p.slug}`}
+              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-smooth duration-700 group-hover:scale-110" />
@@ -97,6 +129,7 @@ const ProductDetail = () => {
         </div>
       </section>
     </Layout>
+            </>
   );
 };
 

@@ -3,8 +3,31 @@ import { ArrowRight } from "lucide-react";
 import Layout from "@/components/site/Layout";
 import PageHero from "@/components/site/PageHero";
 import { productCategories } from "@/data/site";
+import { Helmet } from "react-helmet-async";
 
 const Products = () => (
+
+  <>
+<Helmet>
+
+  <title>Dashmesh Foil – Top Printed Packaging Solutions in India</title>
+	<meta name="description"content="Explore our wide range of PVC shrink labels, heat transfer & shrink films, aluminium foil lids, blister foils & custom printed packaging solutions."/>
+<meta property="og:url" content="https://www.dashmeshfoil.com/products"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Dashmesh Foil – Top Printed Packaging Solutions in India"/>
+<meta property="og:description" content="Explore our wide range of PVC shrink labels, heat transfer & shrink films, aluminium foil lids, blister foils & custom printed packaging solutions."/>
+<meta property="og:image" content="https://www.dashmeshfoil.com/images/12.png"/>
+
+{/* <!-- Twitter Meta Tags --> */}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="dashmeshfoil.com"/>
+<meta property="twitter:url" content="https://www.dashmeshfoil.com/our-products.html"/>
+<meta name="twitter:title" content="Dashmesh Foil – Top Printed Packaging Solutions in India"/>
+<meta name="twitter:description" content="Explore our wide range of PVC shrink labels, heat transfer & shrink films, aluminium foil lids, blister foils & custom printed packaging solutions."/>
+<meta name="twitter:image" content="https://www.dashmeshfoil.com/images/12.png"/>
+
+</Helmet>
+
   <Layout>
     <PageHero
       eyebrow="Our Products"
@@ -12,16 +35,16 @@ const Products = () => (
       highlight="solutions"
       description="From in-mould to heat transfer — explore our complete catalogue of premium label solutions designed for every industry and substrate."
       crumbs={[{ label: "Home", to: "/" }, { label: "Products" }]}
-    />
+      />
 
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {productCategories.map((p, i) => (
             <Link
-              key={p.slug}
-              to={`/products/${p.slug}`}
-              className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2 flex flex-col"
+            key={p.slug}
+            to={`/products/${p.slug}`}
+            className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2 flex flex-col"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -29,7 +52,7 @@ const Products = () => (
                   alt={p.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-smooth duration-700 group-hover:scale-110"
-                />
+                  />
                 <div className="absolute top-5 left-5 w-11 h-11 rounded-xl glass-dark grid place-items-center text-white text-sm font-bold">
                   0{i + 1}
                 </div>
@@ -47,6 +70,7 @@ const Products = () => (
       </div>
     </section>
   </Layout>
+                  </>
 );
 
 export default Products;
