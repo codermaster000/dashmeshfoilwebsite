@@ -41,11 +41,26 @@ const Header = ({ transparentOnTop = false }: Props) => {
           isOverHero ? "bg-transparent py-4" : "glass shadow-card py-2"
         }`}
       >
+        <style>{`
+          /* Make logo/brand readable over hero images */
+          .site-header-logo-img{
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 6px 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+        `}</style>
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-11 h-11 rounded-xl gradient-primary grid place-items-center shadow-elegant transition-smooth group-hover:scale-105">
-              <Layers className="w-6 h-6 text-primary-foreground" />
-            </div>
+         <div className="rounded-xl   px-3 py-2 s">
+  <img
+    src="/src/image/logo.png"
+    alt="Dashmesh Foil"
+    className="h-10 w-auto object-contain"
+  />
+</div>
             <div className="leading-tight">
               <div className={`font-bold text-lg ${isOverHero ? "text-white" : "text-foreground"}`}>
                 {company.name}

@@ -54,12 +54,25 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14">
           {/* About Us - Column 1 */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-white/10 grid place-items-center">
-                <Layers className="w-6 h-6" />
-              </div>
-              <div className="font-bold text-lg">{company.name}</div>
-            </div>
+          <div className="flex items-center gap-4 mb-5">
+  <div className="rounded-2xl  backdrop-blur-md px-1 py-2  ">
+    <img
+      src="/src/image/logo.png"
+      alt="Dashmesh Foil"
+      className="h-12 w-15"
+    />
+  </div>
+
+  <div>
+    <div className="font-bold text-xl leading-none">
+      {company.name}
+    </div>
+
+    <div className="text-[11px] uppercase tracking-[0.22em] text-white/60 mt-1">
+      {company.tagline}
+    </div>
+  </div>
+</div>
             <h4 className="font-bold mb-3">About Us</h4>
             <p className="text-white/70 text-sm leading-relaxed">
               We are a trusted manufacturer & supplier of high-quality packaging labels, designed to enhance
