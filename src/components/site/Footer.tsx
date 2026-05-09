@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="flex items-center gap-4 mb-5">
   <div className="rounded-2xl  backdrop-blur-md px-1 py-2  ">
     <img
-      src="/src/image/logo.png"
+      src="/logo.png"
       alt="Dashmesh Foil"
       className="h-12 w-15"
     />

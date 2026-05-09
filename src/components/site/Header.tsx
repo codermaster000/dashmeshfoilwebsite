@@ -56,7 +56,7 @@ const Header = ({ transparentOnTop = false }: Props) => {
           <Link to="/" className="flex items-center gap-2.5 group">
          <div className="rounded-xl   px-3 py-2 s">
   <img
-    src="/src/image/logo.png"
+    src="/logo.png"
     alt="Dashmesh Foil"
     className="h-10 w-auto object-contain"
   />
