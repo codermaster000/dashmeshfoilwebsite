@@ -32,7 +32,7 @@ const testimonials = [
   { quote: "Top-notch quality and incredible service! They are the best in the business for high-quality labels and timely delivery.", name: "Foqrul Saheb", role: "Senior Artist Developer" },
 ];
 
-const brands = ["Amul", "Mother Dairy", "Nestlé", "Britannia", "Patanjali", "Dabur", "Himalaya", "Parle", "ITC", "Haldiram's"];
+const brands = ["Amul", "Mother Dairy", "HOCO", "Fresca", "Xalta", "TATA", "Muscle Blaze", "Milky Mist", "Hatsun", "Country Delight"];
 
 const Index = () => {
   useEffect(() => {
