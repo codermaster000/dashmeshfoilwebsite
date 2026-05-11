@@ -149,7 +149,7 @@ export const mainNav = [
 export const company = {
   name: "Dashmesh Foil",
   tagline: "Label Manufacturer",
-  phones: ["+91-9811420447", "+91-9911010101"],
+  phones: ["+91-9218109650"],
   emails: ["info@dashmeshfoil.com", "sandeep@dashmeshfoil.com"],
   address:
     "Industrial Plot No. 01-2, Industrial Plot No. 1, Village Dabua Western Extended Industrial Area, NIT Faridabad, Faridabad, Haryana - 121001",

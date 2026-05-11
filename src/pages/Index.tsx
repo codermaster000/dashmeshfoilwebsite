@@ -88,7 +88,7 @@ const Index = () => {
               <div className="text-xs uppercase tracking-[0.2em] text-white/70 mb-4">Connect With Us</div>
               <div className="space-y-4">
                 {[
-                  { icon: Phone, label: "Call us", value: "+91-9811420447" },
+                  { icon: Phone, label: "Call us", value: "+91-9218109650" },
                   { icon: Mail, label: "Email", value: "info@dashmeshfoil.com" },
                   { icon: MapPin, label: "Office", value: "NIT Faridabad, Haryana" },
                 ].map((c) => (
