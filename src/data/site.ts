@@ -2,9 +2,9 @@ import imlImg from "@/assets/amul.png";
 import shrinkImg from "@/assets/xalta.png";
 import foilImg from "@/assets/19-B2vP_W6D.png";
 import boppImg from "@/assets/mb.png";
-import STICKER from "@/assets/16-BM2i_JPH.png";
+import STICKER from "@/assets/product-shrink.jpg";
 import hoco from "@/assets/hoco.png";
-import streve from "@/assets/2-waA1HRTp.png";
+import streve from "@/assets/gallery-foil-rolls.jpg";
 
 export type ProductCategory = {
   slug: string;

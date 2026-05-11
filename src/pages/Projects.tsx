@@ -389,11 +389,6 @@ const Projects = () => {
           </div>
         </section>
 
-        <ProjectGallery
-          title="Project Gallery"
-          subheading="Showcasing real packaging solutions, printed labels, and flexible foil projects delivered across multiple industries."
-    
-        />
 
 
         {/* WHY CHOOSE US */}
