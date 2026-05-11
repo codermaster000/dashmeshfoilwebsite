@@ -1,7 +1,10 @@
-import imlImg from "@/assets/product-iml.jpg";
-import shrinkImg from "@/assets/product-shrink.jpg";
-import foilImg from "@/assets/product-foil.jpg";
-import boppImg from "@/assets/product-bopp.jpg";
+import imlImg from "@/assets/amul.png";
+import shrinkImg from "@/assets/xalta.png";
+import foilImg from "@/assets/19-B2vP_W6D.png";
+import boppImg from "@/assets/mb.png";
+import STICKER from "@/assets/16-BM2i_JPH.png";
+import hoco from "@/assets/hoco.png";
+import streve from "@/assets/2-waA1HRTp.png";
 
 export type ProductCategory = {
   slug: string;
@@ -65,7 +68,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Custom stickers for branding, batch coding, promotions, and product identification. Available in paper, PP, PE, and metallised substrates with a wide range of adhesives.",
     features: ["Multiple substrates", "Permanent or removable", "Variable data printing", "Custom shapes"],
-    image: imlImg,
+    image: STICKER,
   },
   {
     slug: "self-adhesive-labels",
@@ -74,7 +77,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "High-tack and removable self-adhesive labels printed on rolls or sheets. Suited for pharma vials, cosmetic bottles, logistics, and barcode labelling with consistent dispensing on automatic lines.",
     features: ["Roll or sheet form", "FDA-compliant adhesives", "Automatic-line ready", "Scratch-resistant inks"],
-    image: boppImg,
+    image: streve,
   },
   {
     slug: "heat-transfer-labels",
@@ -83,7 +86,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Heat-applied labels deliver a no-label, photo-realistic finish on plastic and metal containers. Excellent for cosmetics, lubricants, and premium beverage packaging.",
     features: ["Photo-realistic detail", "Scratch & chemical resistant", "No-label appearance", "Curved-surface ready"],
-    image: shrinkImg,
+    image: hoco,
   },
 ];
 

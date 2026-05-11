@@ -19,15 +19,14 @@ import {
 } from "lucide-react";
 import Layout from "@/components/site/Layout";
 import { Button } from "@/components/ui/button";
+import ProjectGallery from "@/components/site/ProjectGallery";
+import amul from "@/assets/amul.png";
+
 import heroBg from "@/assets/projects-hero.jpg";
-import galPouches from "@/assets/gallery-pouches.jpg";
-import galRolls from "@/assets/gallery-foil-rolls.jpg";
-import galPrinting from "@/assets/gallery-printing.jpg";
-import galTexture from "@/assets/gallery-texture.jpg";
-import imlImg from "@/assets/product-iml.jpg";
-import shrinkImg from "@/assets/product-shrink.jpg";
-import foilImg from "@/assets/product-foil.jpg";
-import boppImg from "@/assets/product-bopp.jpg";
+
+import shrinkImg from "@/assets/xalta.png";
+import foilImg from "@/assets/mb.png";
+import boppImg from "@/assets/hoco.png";
 
 /* ---------------- Data ---------------- */
 
@@ -50,7 +49,7 @@ const projects = [
     type: "IML & Foil Lids",
     description:
       "End-to-end in-mould labelling and aluminium lid programs powering yoghurt cups, ghee tins and ice-cream tubs across India.",
-    image: imlImg,
+    image: amul,
   },
   {
     brand: "Xalta Beverages",
@@ -76,7 +75,7 @@ const projects = [
     category: "FMCG",
     type: "Flexible Pouches & Films",
     description:
-      "High-barrier flexible pouches and printed films delivering shelf-stable, food-grade packaging at industrial scale.",
+      "High-barrier flexible lables and printed films delivering shelf-stable, food-grade packaging at industrial scale.",
     image: boppImg,
   },
 ];
@@ -353,7 +352,7 @@ const Projects = () => {
         {/* STATS */}
         <section className="py-24 relative overflow-hidden">
           <img
-            src={galTexture}
+            src={new URL("../assets/gallery-texture.jpg", import.meta.url).toString()}
             alt=""
             aria-hidden
             className="absolute inset-0 w-full h-full object-cover opacity-10"
@@ -390,48 +389,12 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* GALLERY */}
-        <section className="py-24 relative">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-              <div>
-                <span className="text-xs uppercase tracking-[0.3em] text-[hsl(212_85%_70%)] font-semibold">
-                  Showcase
-                </span>
-                <h2 className="mt-3 text-3xl md:text-5xl font-bold">Inside Our Craft</h2>
-              </div>
-              <p className="text-slate-400 max-w-md">
-                From printing presses to finished foil rolls — a closer look at the materials,
-                machines and moments that shape our packaging.
-              </p>
-            </div>
+        <ProjectGallery
+          title="Project Gallery"
+          subheading="Showcasing real packaging solutions, printed labels, and flexible foil projects delivered across multiple industries."
+    
+        />
 
-            <div className="grid grid-cols-12 gap-4 md:gap-6">
-              {[
-                { img: galPouches, span: "col-span-12 md:col-span-5 md:row-span-2 aspect-[4/5]", label: "Flexible Pouches" },
-                { img: galRolls, span: "col-span-12 md:col-span-7 aspect-[16/9]", label: "Foil Rolls" },
-                { img: galPrinting, span: "col-span-6 md:col-span-4 aspect-[4/5] md:aspect-auto", label: "Printing Process" },
-                { img: galTexture, span: "col-span-6 md:col-span-3 aspect-[4/5] md:aspect-auto", label: "Material Texture" },
-              ].map((g, i) => (
-                <figure
-                  key={i}
-                  className={`relative overflow-hidden rounded-3xl border border-white/10 group ${g.span}`}
-                >
-                  <img
-                    src={g.img}
-                    alt={g.label}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-smooth duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                  <figcaption className="absolute bottom-5 left-5 text-sm uppercase tracking-[0.2em] text-white/90 font-semibold">
-                    {g.label}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* WHY CHOOSE US */}
         <section className="py-24 relative">
