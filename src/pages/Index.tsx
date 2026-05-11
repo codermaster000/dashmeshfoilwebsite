@@ -146,8 +146,19 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
             <div className="absolute -inset-4 gradient-primary rounded-3xl opacity-20 blur-2xl" />
-            <img src={factoryImg} alt="Dashmesh Foil printing facility" loading="lazy" width={1200} height={900}
-              className="relative rounded-3xl shadow-elegant w-full h-[500px] object-cover" />
+           
+            
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/7LN3IY89A0k?si=7R-CShK_l50zlH1R"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="relative rounded-3xl shadow-elegant w-full h-[410px] object-cover"
+              />
             <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 shadow-elegant hidden md:flex items-center gap-4">
               <div className="w-12 h-12 rounded-full gradient-primary grid place-items-center">
                 <ShieldCheck className="w-6 h-6 text-primary-foreground" />
