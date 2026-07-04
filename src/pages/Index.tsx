@@ -4,7 +4,10 @@ import {
   Phone, Mail, MapPin, ArrowRight, Linkedin, Facebook, Instagram,
   Printer, ScanLine, Sparkles, ShieldCheck, PenTool, Quote, ChevronDown,
   Zap, Layers, Repeat, CheckCircle2, Star,
+  Building2,
+  Star as StarIcon,
 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/site/Layout";
 import heroImg from "@/assets/hero-labels.jpg";
@@ -21,15 +24,48 @@ const services = [
 
 const process = [
   { n: "01", icon: Zap, title: "Quick Printing", desc: "Fast-track your packaging needs with our high speed printing solutions." },
-  { n: "02", icon: Layers, title: "Offset Printing", desc: "High-definition color precision and sharp details for premium quality label production." },
+  { n: "02", icon: Layers, title: "High Quality Printing", desc: "High-definition color precision and sharp details for premium quality label production." },
   { n: "03", icon: Repeat, title: "Long Running", desc: "Reliable, consistent quality for large scale production runs." },
   { n: "04", icon: CheckCircle2, title: "Final Results", desc: "Superior quality labels delivered with precision, every single time." },
 ];
 
 const testimonials = [
-  { quote: "Dashmesh Foil is the go-to solution for all our packaging needs. Very professional service.", name: "Ankit Arora", role: "McDowells No.1" },
-  { quote: "We are impressed by the material and print quality of all the labels. We admire our partnership.", name: "Himanshu", role: "Bright Life Care" },
-  { quote: "Top-notch quality and incredible service! They are the best in the business for high-quality labels and timely delivery.", name: "Foqrul Saheb", role: "Senior Artist Developer" },
+  {
+    quote:
+      "The label quality was perfect, and the order was delivered on time. I highly recommend Dashmesh Foils for any label printing requirements.",
+    name: "Mayank Dua",
+    role: "",
+  },
+  {
+    quote:
+      "Excellent quality aluminium foil and printed packaging with neat finishing. The team handled customization professionally and delivered exactly what we needed.",
+    name: "Neha Kumari",
+    role: "",
+  },
+  {
+    quote:
+      "Outstanding label quality, timely delivery, and excellent customer service. Our overall experience exceeded expectations. Highly recommended.",
+    name: "ANURAG Dubey",
+    role: "",
+  },
+  {
+    quote:
+      "We've been sourcing aluminium foil lids and blister foils from Dashmesh Foils. The product quality and service have always been excellent.",
+    name: "Tushar Arora",
+    role: "",
+  },
+  {
+    quote:
+      "The sales team was polite and helped us with design guidance and quality consultation. Overall, a smooth and professional experience.",
+    name: "Prashant Bisht",
+    role: "",
+  },
+  {
+    quote:
+      "We have been sourcing labels from Dashmesh Foils for a long time, and the quality has remained consistently excellent.",
+    name: "Pankaj Kumar Sharma",
+    role: "",
+  },
 ];
 
 const brands = ["Amul", "Mother Dairy", "HOCO", "Fresca", "Xalta", "TATA", "Muscle Blaze", "Milky Mist", "Hatsun", "Country Delight"];
@@ -140,6 +176,51 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* OUR EXPERTISE */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold">Our Expertise</h2>
+          </div>
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+            {[
+              {
+                icon: Printer,
+                title: "Digital Printing",
+                desc: "Fast, flexible, and cost-effective printing solutions for short production runs, customized labels, variable data printing, and quick turnaround requirements.",
+              },
+              {
+                icon: Layers,
+                title: "Flexographic Printing",
+                desc: "High-speed printing technology ideal for large-volume label and flexible packaging production, delivering consistent quality, vibrant colors, and excellent durability.",
+              },
+              {
+                icon: Star,
+                title: "Rotogravure Printing",
+                desc: "Premium printing solution for high-volume production, offering exceptional image clarity, rich color reproduction, and superior print consistency.",
+              },
+              
+            ].map((c) => (
+
+
+              <div
+                key={c.title}
+                className="group relative bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2 h-full flex flex-col"
+              >
+                <div className="w-14 h-14 rounded-xl gradient-primary grid place-items-center mb-6 shadow-elegant group-hover:scale-110 transition-smooth">
+                  <c.icon className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{c.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm flex-1">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* ABOUT */}
       <section id="about" className="py-24 bg-background">
@@ -257,17 +338,51 @@ const Index = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Testimonials</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-3">What our <span className="gradient-text">clients say</span></h2>
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Trusted by Our Clients</span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          Google Reviews from our valued clients.
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="relative bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2">
+              <div
+                key={t.name}
+                className="relative bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant border border-border/60 transition-smooth hover:-translate-y-2"
+              >
                 <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/15" />
+
                 <div className="flex gap-0.5 mb-5">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
                 </div>
-                <p className="text-foreground leading-relaxed mb-6">"{t.quote}"</p>
+
+                <div className="flex items-center gap-2 mb-5">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4 text-primary"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 10.2v3.6h5.3c-.2 1.1-.9 2.1-1.9 2.7v2.4h3.1c1.8-1.6 2.9-4 2.9-6.8 0-3.9-2.6-7-8.4-7-5.1 0-9.1 4-9.1 9.1s4 9.1 9.1 9.1c2 0 3.7-.6 5-1.7l-2.4-1.9c-.7.5-1.6.8-2.6.8-1.9 0-3.5-1.2-4.1-2.9H7.7v-2.9H12z" />
+                  </svg>
+                  <span className="text-xs font-medium text-muted-foreground">
+                    Verified Google Review
+                  </span>
+                </div>
+
+                <p
+                  className="text-foreground leading-relaxed mb-6 line-clamp-4"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 4,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  "{t.quote}"
+                </p>
+
                 <div className="pt-5 border-t border-border flex items-center gap-3">
                   <div className="w-11 h-11 rounded-full gradient-primary grid place-items-center text-primary-foreground font-bold">
                     {t.name.charAt(0)}
