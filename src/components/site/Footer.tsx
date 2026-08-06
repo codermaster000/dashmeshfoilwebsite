@@ -9,37 +9,6 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-black text-white pt-16 pb-8">
-      {/* Social Box */}
-      <div className="absolute right-8 top-20 flex flex-col gap-4 max-md:hidden">
-        <a
-          href="https://www.linkedin.com/company/dashmeshfoil/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
-          aria-label="LinkedIn"
-        >
-          <Linkedin className="w-4 h-4" />
-        </a>
-        <a
-          href="https://www.facebook.com/dashmeshfoil/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
-          aria-label="Facebook"
-        >
-          <Facebook className="w-4 h-4" />
-        </a>
-        <a
-          href="https://www.instagram.com/dashmeshfoil/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
-          aria-label="Instagram"
-        >
-          <Instagram className="w-4 h-4" />
-        </a>
-      </div>
-
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
@@ -51,7 +20,7 @@ const Footer = () => {
 
       <div className="container mx-auto px-4 lg:px-8">
         {/* Widgets Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14">
+        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-8 lg:mb-14">
           {/* About Us - Column 1 */}
           <div className="lg:col-span-4">
           <div className="flex items-center gap-4 mb-5">
@@ -139,6 +108,37 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex w-full items-center justify-center gap-4 mb-8 static lg:absolute lg:right-8 lg:top-20 lg:w-auto lg:flex-col lg:mb-0">
+          <a
+            href="https://www.linkedin.com/company/dashmeshfoil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-11 h-11 lg:w-10 lg:h-10 shrink-0 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-4 h-4" />
+          </a>
+          <a
+            href="https://www.facebook.com/dashmeshfoil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-11 h-11 lg:w-10 lg:h-10 shrink-0 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
+            aria-label="Facebook"
+          >
+            <Facebook className="w-4 h-4" />
+          </a>
+          <a
+            href="https://www.instagram.com/dashmeshfoil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-11 h-11 lg:w-10 lg:h-10 shrink-0 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-smooth"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-4 h-4" />
+          </a>
         </div>
 
         {/* Contact Info Section */}

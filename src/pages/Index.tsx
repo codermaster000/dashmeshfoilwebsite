@@ -10,6 +10,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/site/Layout";
+import FAQSection from "@/components/site/FAQSection";
 import heroImg from "@/assets/hero-labels.jpg";
 import factoryImg from "@/assets/about-factory.jpg";
 import { productCategories } from "@/data/site";
@@ -431,6 +432,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <FAQSection />
     </Layout>
   );
 };
