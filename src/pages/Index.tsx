@@ -68,7 +68,17 @@ const testimonials = [
   },
 ];
 
-const brands = ["Amul", "Mother Dairy", "HOCO", "Fresca", "Xalta", "TATA", "Muscle Blaze", "Milky Mist", "Hatsun", "Country Delight"];
+const brandLogos: { src: string; alt: string; scale?: boolean }[] = [
+  { src: "/logo/amul.jpg", alt: "Amul" },
+  { src: "/logo/endura.jpg", alt: "Endura" },
+  { src: "/logo/fresca.jpg", alt: "Fresca" },
+  { src: "/logo/hatsun.jpg", alt: "Hatsun", scale: true },
+  { src: "/logo/hoco.jpg", alt: "HOCO" },
+  { src: "/logo/milky.png", alt: "Milky Mist" },
+  { src: "/logo/mother.png", alt: "Mother Dairy" },
+  { src: "/logo/muscleblaze.png", alt: "MuscleBlaze" },
+  { src: "/logo/xalta.jpg", alt: "Xalta" },
+];
 
 const Index = () => {
   useEffect(() => {
@@ -404,10 +414,18 @@ const Index = () => {
           <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Trusted by Brands</h3>
         </div>
         <div className="overflow-hidden">
-          <div className="flex gap-12 animate-marquee whitespace-nowrap">
-            {[...brands, ...brands].map((b, i) => (
-              <div key={i} className="text-2xl md:text-3xl font-bold text-muted-foreground/60 hover:text-primary transition-smooth">
-                {b}
+          <div className="flex w-max animate-marquee">
+            {[0, 1].map((copy) => (
+              <div key={copy} className="flex shrink-0 items-center gap-10 pr-10 sm:gap-12 sm:pr-12 lg:gap-14 lg:pr-14" aria-hidden={copy === 1}>
+                {brandLogos.map((brand) => (
+                  <div key={brand.src} className="flex h-[60px] w-[110px] shrink-0 items-center justify-center sm:h-[70px] sm:w-[135px] lg:h-20 lg:w-40">
+                    <img
+                      src={brand.src}
+                      alt={copy === 0 ? `${brand.alt} logo` : ""}
+                      className={`h-auto w-auto max-h-[70px] max-w-[150px] object-contain sm:max-h-[52px] sm:max-w-[155px] lg:max-h-[70px] lg:max-w-[155px] ${brand.scale ? "scale-[1.15]" : ""}`}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </div>
