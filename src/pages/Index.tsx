@@ -13,6 +13,11 @@ import Layout from "@/components/site/Layout";
 import FAQSection from "@/components/site/FAQSection";
 import heroImg from "@/assets/hero-labels.jpg";
 import factoryImg from "@/assets/about-factory.jpg";
+import countryDelightLogo from "@/assets/country.jpg";
+import mcdowellsLogo from "@/assets/McDowell's.png";
+import milkyMistLogo from "@/assets/milky.png";
+import patanjaliLogo from "@/assets/patanjali.png";
+import wildStoneLogo from "@/assets/wild.webp";
 import { productCategories } from "@/data/site";
 
 const services = [
@@ -75,10 +80,14 @@ const brandLogos: { src: string; alt: string; scale?: boolean }[] = [
   { src: "/logo/fresca.jpg", alt: "Fresca" },
   { src: "/logo/hatsun.jpg", alt: "Hatsun", scale: true },
   { src: "/logo/hoco.jpg", alt: "HOCO" },
-  { src: "/logo/milky.png", alt: "Milky Mist" },
+  { src: milkyMistLogo, alt: "Milky Mist" },
   { src: "/logo/mother.png", alt: "Mother Dairy" },
   { src: "/logo/muscleblaze.png", alt: "MuscleBlaze" },
   { src: "/logo/xalta.jpg", alt: "Xalta" },
+  { src: countryDelightLogo, alt: "Country Delight" },
+  { src: mcdowellsLogo, alt: "McDowell’s" },
+  { src: patanjaliLogo, alt: "Patanjali" },
+  { src: wildStoneLogo, alt: "Wild Stone" },
 ];
 
 const Index = () => {
@@ -423,7 +432,7 @@ const Index = () => {
                     <img
                       src={brand.src}
                       alt={copy === 0 ? `${brand.alt} logo` : ""}
-                      className={`h-auto w-auto max-h-[70px] max-w-[150px] object-contain sm:max-h-[52px] sm:max-w-[155px] lg:max-h-[70px] lg:max-w-[155px] ${brand.scale ? "scale-[1.15]" : ""}`}
+                      className={`h-auto w-auto max-h-[70px] max-w-[150px] object-contain sm:max-h-[52px] sm:max-w-[155px] lg:max-h-[85px] lg:max-w-[175px] ${brand.scale ? "scale-[1.17]" : ""}`}
                     />
                   </div>
                 ))}
