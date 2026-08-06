@@ -309,15 +309,18 @@ const Index = () => {
               >
                 <div className="aspect-[4/5] overflow-hidden">
                   <img src={p.image} alt={p.title} loading="lazy" width={800} height={1000}
-                    className="w-full h-full object-cover transition-smooth duration-700 group-hover:scale-110" />
+                    className="w-full h-full object-cover transition-smooth duration-700 group-hover:scale-110"/>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-deep via-primary-deep/30 to-transparent opacity-90" />
-                <div className="absolute top-5 left-5 w-11 h-11 rounded-xl glass-dark grid place-items-center text-white text-sm font-bold">
+                <div
+                  className="pointer-events-none absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(7, 22, 40, 0.88) 0%, rgba(7, 22, 40, 0.55) 32%, rgba(7, 22, 40, 0.10) 65%, transparent 100%)" }}
+                />
+                <div className="absolute top-5 left-5 z-10 w-11 h-11 rounded-xl glass-dark grid place-items-center text-white text-sm font-bold">
                   0{i + 1}
                 </div>
-                <div className="absolute bottom-0 inset-x-0 p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                  <span className="inline-flex items-center gap-1.5 text-sm text-white/80 group-hover:text-white transition-smooth">
+                <div className="absolute bottom-0 inset-x-0 z-10 p-6 text-white">
+                  <h3 className="text-xl font-bold mb-2 drop-shadow-sm">{p.title}</h3>
+                  <span className="inline-flex items-center gap-1.5 text-sm text-white/90 drop-shadow-sm group-hover:text-white transition-smooth">
                     Learn more <ArrowRight className="w-4 h-4 transition-smooth group-hover:translate-x-1" />
                   </span>
                 </div>
