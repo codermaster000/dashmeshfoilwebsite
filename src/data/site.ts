@@ -143,6 +143,7 @@ export const mainNav = [
     children: markets.map((m) => ({ label: m.title, to: `/markets/${m.slug}` })),
   },
   { label: "Projects", to: "/projects" },
+  { label: "Blog", to: "https://dashmeshfoil.com/blog/" },
   { label: "Contact", to: "/contact" },
 ];
 
