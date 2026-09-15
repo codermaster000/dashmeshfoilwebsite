@@ -78,6 +78,11 @@ const Footer = () => {
                   Contact us
                 </Link>
               </li>
+              <li>
+                <Link to="/privacy-policy" className="hover:text-white transition-smooth">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -183,10 +188,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
           <p>Copyright © {new Date().getFullYear()} by Dashmeshfoil All Rights Reserved | Dashmesh Foil</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white transition-smooth">
+            <a href="/privacy-policy" className="hover:text-white transition-smooth">
               Privacy
             </a>
-            <a href="#" className="hover:text-white transition-smooth">
+            <a href="/privacy-policy" className="hover:text-white transition-smooth">
               Terms
             </a>
           </div>
