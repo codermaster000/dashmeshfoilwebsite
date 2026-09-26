@@ -18,13 +18,13 @@ const ProductDetail = () => {
 
     <>
     <Helmet>
-      <title>IML Labels </title>
-	<meta name="description"content="Dashmesh Foil offers premium quality IML Labels for packaging. IML is a sustainable and fully recyclable packaging solution."/>
+      <title>{product.metaTitle}</title>
+	<meta name="description" content={product.metaDescription}/>
 	{/* <!-- Stylesheets --> */}
 	<link href="css/bootstrap.css" rel="stylesheet"/>
 	<link href="css/style.css" rel="stylesheet"/>
 	<link href="css/responsive.css" rel="stylesheet"/>
-	<link rel="canonical" href="https://www.dashmeshfoil.com/products/iml-labels"/>
+	<link rel="canonical" href={`https://www.dashmeshfoil.com/products/${product.slug}`}/>
     <meta name="robots" content="index, follow" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&amp;display=swap"

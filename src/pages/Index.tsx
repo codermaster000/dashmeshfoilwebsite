@@ -19,6 +19,7 @@ import milkyMistLogo from "@/assets/milky.png";
 import patanjaliLogo from "@/assets/patanjali.png";
 import wildStoneLogo from "@/assets/wild.webp";
 import { productCategories } from "@/data/site";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   { icon: Printer, title: "Printing Service", desc: "Custom high-quality label printing solutions tailored for the dairy, beverage, and pharmaceutical industries." },
@@ -97,6 +98,11 @@ const Index = () => {
 
   return (
     <Layout transparentHeader>
+      <Helmet>
+        <title>Industrial Packaging Label Manufacturer in Delhi NCR | Dashmesh</title>
+        <meta name="description" content="B2B packaging labels supplier in Faridabad, Haryana. Trusted bulk label exporter from India to global markets. High-quality foil, IML, and sticker labels." />
+        <link rel="canonical" href="https://www.dashmeshfoil.com/" />
+      </Helmet>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
         <div className="absolute inset-0">

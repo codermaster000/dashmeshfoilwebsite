@@ -11,6 +11,8 @@ export type ProductCategory = {
   title: string;
   short: string;
   description: string;
+  metaTitle: string;
+  metaDescription: string;
   features: string[];
   image: string;
 };
@@ -28,63 +30,77 @@ export const productCategories: ProductCategory[] = [
   {
     slug: "iml-labels",
     title: "IML Labels",
+    metaTitle: "Premium IML Labels Manufacturer in Faridabad | Dashmesh Foil",
+    metaDescription: "High-quality, moisture resistant in mould labels for plastic containers and ice cream tubs. Custom IML labels for dairy packaging in India. Get a quote!",
     short: "In-mould labels for premium plastic packaging.",
     description:
-      "Our IML (In-Mould Labels) are fused into the container during the moulding process, producing a seamless, high-clarity finish that withstands moisture, friction, and refrigeration. Perfect for dairy tubs, ice-cream cups, and premium food packs.",
+      "Dashmesh Foil and Labels, a leading premium IML labels manufacturer in Faridabad. We specialize in producing vibrant, highly durable in mould labels manufacturer for ice cream tubs, butter containers, and FMCG packaging. Engineered to fuse seamlessly with plastic containers during molding, our custom IML labels for dairy packaging India offer flawless aesthetics and unparalleled resistance to scratching or peeling. If you are looking for moisture resistant in mould labels for plastic containers that maintain their premium look in cold and humid conditions, our high-precision manufacturing ensures your brand stands out on every shelf.",
     features: ["Seamless finish", "Moisture resistant", "Photo-quality print", "100% recyclable"],
     image: imlImg,
   },
   {
     slug: "shrink-sleeve",
     title: "Shrink Sleeve Labels",
+    metaTitle: " Label Manufacturer & Exporter India | Dashmesh Foil and Labels ",
+    metaDescription: "Leading manufacturer & exporter of PVC Shrink Labels, BOPP Wrap-around labels, and self-adhesive stickers. High-speed industrial printing for beverages & pharma.",
     short: "360° decoration that hugs every contour.",
     description:
-      "Heat-shrink PVC and PET-G sleeves that conform to any container shape. Ideal for full-body branding on bottles, jars, and cans with vibrant graphics and tamper-evident neck bands.",
+      "Achieve flawless 360-degree branding on contoured containers with our premium wrap-around solutions. We produce high-shrink 360 degree shrink sleeve labels for bottle packaging that fit complex shapes perfectly, ensuring maximum visual real estate for your brand. As an established, custom printed pvc shrink sleeves bulk supplier, we cater to large-scale beverage, cosmetic, and chemical manufacturers requiring high scuff-resistance. For long-lasting, direct-to-product graphics, we also manufacture robust heat transfer labels for plastic promotional mugs and industrial pails that permanently bond with the substrate.",
     features: ["360° branding", "Tamper-evident", "Vibrant CMYK + spot colors", "PET-G & PVC options"],
     image: shrinkImg,
   },
   {
     slug: "aluminum-lids",
     title: "Aluminium Foil Lids",
+    metaTitle: "Custom Printed Aluminium Foil Lids Manufacturer | Dashmesh",
+    metaDescription: "Leading bulk pharmaceutical blister packing foil supplier in India. Premium heat seal aluminium foil lids for curd, yogurt cups, and plastic tubs.",
     short: "Hygienic seals for cups and containers.",
     description:
-      "Heat-sealable aluminium foil lids for dairy cups, yoghurt, ghee, and ready-to-eat meals. Engineered for puncture resistance, easy peel, and an airtight seal that extends shelf life.",
+      "Ensure ultimate product freshness and leak-proof security with our advanced sealing systems. As a trusted, custom printed aluminium foil lids manufacturer, we provide high-barrier protection engineered specifically for food, beverage, and medical industries. We manufacture heavy-duty aluminium foil lids for curd and yogurt cups that prevent contamination and preserve taste, alongside robust heat seal foil lids for plastic tubs and jars. Additionally, we support pharmaceutical supply chains as a premier bulk pharmaceutical blister packing foil supplier India, delivering exceptional puncture resistance and strict adherence to hygiene standards.",
     features: ["Easy peel", "Airtight seal", "Food-grade lacquer", "Custom die-cut shapes"],
     image: foilImg,
   },
   {
     slug: "bopp-labels",
     title: "BOPP Labels",
+    metaTitle: "Waterproof BOPP Sticker Labels for Beverage Bottles & Cosmetics",
+    metaDescription: "Custom pressure sensitive sticker labels manufacturer in India. Premium, moisture-proof clear and white BOPP labels for cosmetic jars and bottles.",
     short: "Clear and white film labels with a glossy finish.",
     description:
-      "Bi-axially Oriented Polypropylene labels deliver a no-label look on transparent bottles and crisp imagery on white film. Water-resistant and freezer-grade for beverages and personal care.",
+      "Maximize your product's shelf appeal and durability with our premium film labeling solutions. As a trusted waterproof BOPP sticker labels for beverage bottles manufacturer, we supply high-clarity clear, white, and metallic films that completely resist moisture, oil, and scuffing. These rugged yet visually stunning labels are perfect for the personal care, food, and beverage industries. Partner with a specialized pressure sensitive sticker labels manufacturer India to get custom-engineered custom self adhesive labels for cosmetic jars and bottles, built to perform flawlessly on high-speed automatic labeling lines.",
     features: ["No-label clarity", "Water & oil resistant", "Freezer grade", "Long-lasting adhesion"],
     image: boppImg,
   },
   {
     slug: "sticker-labels",
     title: "Sticker Labels",
+    metaTitle: "Pressure Sensitive Sticker Labels Manufacturer India | Dashmesh",
+    metaDescription: "Custom self adhesive labels for cosmetic jars and waterproof BOPP sticker labels for beverage bottles. FDA compliant self adhesive pharma labels.",
     short: "Versatile pressure-sensitive stickers.",
     description:
-      "Custom stickers for branding, batch coding, promotions, and product identification. Available in paper, PP, PE, and metallised substrates with a wide range of adhesives.",
+      "Enhance your product presentation with high-performance labeling designed for demanding industries. Dashmesh Foil manufactures FDA compliant self adhesive pharma labels and retail packaging stickers that ensure complete legal compliance and durability. From sophisticated, custom self adhesive labels for cosmetic jars to ultra-durable, waterproof BOPP sticker labels for beverage bottles, our printing technology delivers razor-sharp clarity. Partner with a premier pressure sensitive sticker labels manufacturer India to get custom roll or sheet labels that seamlessly integrate into your high-speed automated labeling lines.",
     features: ["Multiple substrates", "Permanent or removable", "Variable data printing", "Custom shapes"],
     image: STICKER,
   },
   {
     slug: "self-adhesive-labels",
     title: "Self-Adhesive Labels",
+    metaTitle: "Pressure Sensitive Sticker Labels Manufacturer India | Dashmesh",
+    metaDescription: "Custom self adhesive labels for cosmetic jars and waterproof BOPP sticker labels for beverage bottles. FDA compliant self adhesive pharma labels.",
     short: "Peel-and-stick labels for every industry.",
     description:
-      "High-tack and removable self-adhesive labels printed on rolls or sheets. Suited for pharma vials, cosmetic bottles, logistics, and barcode labelling with consistent dispensing on automatic lines.",
+      "Enhance your product presentation with high-performance labeling designed for demanding industries. Dashmesh Foil manufactures FDA compliant self adhesive pharma labels and retail packaging stickers that ensure complete legal compliance and durability. From sophisticated, custom self adhesive labels for cosmetic jars to ultra-durable, waterproof BOPP sticker labels for beverage bottles, our printing technology delivers razor-sharp clarity. Partner with a premier pressure sensitive sticker labels manufacturer India to get custom roll or sheet labels that seamlessly integrate into your high-speed automated labeling lines.",
     features: ["Roll or sheet form", "FDA-compliant adhesives", "Automatic-line ready", "Scratch-resistant inks"],
     image: streve,
   },
   {
     slug: "heat-transfer-labels",
     title: "Heat Transfer Labels",
+    metaTitle: "Heat Transfer Labels for Plastic Promotional Mugs & Pails",
+    metaDescription: "High-definition heat transfer labels manufacturer in Delhi NCR. Permanent, scratch-resistant HTL graphics for rigid plastic products and containers.",
     short: "Premium decoration that becomes part of the surface.",
     description:
-      "Heat-applied labels deliver a no-label, photo-realistic finish on plastic and metal containers. Excellent for cosmetics, lubricants, and premium beverage packaging.",
+      "Achieve permanent, high-definition graphics directly on your plastic products with our advanced thermal transfer technology. We manufacture vibrant heat transfer labels for plastic promotional mugs, household buckets, and industrial pails that fuse flawlessly with the container surface. This process ensures your branding is entirely scratch-resistant, chemical-proof, and long-lasting. As a leading industrial packaging label manufacturer in Delhi NCR, our facility delivers bulk rolls with exact registration, making us the preferred b2b packaging labels supplier Faridabad haryana for brands requiring premium, no-label-look aesthetics on rigid plastics.",
     features: ["Photo-realistic detail", "Scratch & chemical resistant", "No-label appearance", "Curved-surface ready"],
     image: hoco,
   },
